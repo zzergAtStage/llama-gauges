@@ -7,35 +7,7 @@ one per loaded model.
 It shows live generation and prefill speed, slot activity, context fill, speculative / MTP draft
 acceptance and a request log, next to GPU, CPU, RAM, PCIe and disk gauges. It is a single
 Python file built on [rich](https://github.com/Textualize/rich).
-
-```
- LLAMA   Serving   http://127.0.0.1:53197   Qwen3-8B-Q8_0 32k ×4                         ● Generating · 14%   [LIVE]
- [1 Overview]   2 Slots    3 Requests    4 Hardware
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
- Model state   Idle   Reading  [Generating]  Queued   Error                            169 / 1,200 output tokens · 14%
- ████████████████▎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-┌─  Speed  ────────────────┐ ┌─  GPU load  ─────────────┐ ┌─  VRAM  ─────────────────┐ ┌─  GPU temp  ─────────────┐
-│ 71.6 tok/s               │ │ 94 %                     │ │ 12.7 / 16 GB             │ │ 58 °C                    │
-│ generating · peak 72.3   │ │ RTX 4070 Ti SUPER        │ │ 80% used · 3.2 GB free   │ │ fan 41% · SM 2610 MHz    │
-│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▅▇▇▇▇▇▇▇▇▇▇ │ │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▆██████████ │ │ ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ │ │ ▃▃▃▃▃▃▃▃▃▃▃▃▃▄▅▅▅▅▅▅▅▅▅▅ │
-└──────────────────────────┘ └──────────────────────────┘ └──────────────────────────┘ └──────────────────────────┘
-┌─  Power  ────────────────┐ ┌─  PCIe  ─────────────────┐ ┌─  CPU  ──────────────────┐ ┌─  Disk read  ────────────┐
-│ 139 W                    │ │ Gen4 x16                 │ │ 9 %                      │ │ 0.0 MB/s                 │
-│ of 285 W limit           │ │ to GPU 13 · from 216 MB/s│ │ 8 cores · 16 threads     │ │ write 0.1 MB/s           │
-│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▄▆▆▆▆▆▆▆▆▆▆ │ │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▂▁▁▂▁▁▂▁ │ │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁ │ │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ │
-└──────────────────────────┘ └──────────────────────────┘ └──────────────────────────┘ └──────────────────────────┘
- Context fill                       355 / 32k  1%   Recent requests
- ▌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   TIME      STATUS  PROMPT  REUSED  OUTPUT  TOK/S  DURATION
- Draft acceptance     39% · 1.17/draft · 62/34/20   03:09:23  Gen        186      10     169   71.6     2.2 s
- ██████████████████▊━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   03:08:51  Done       271       0     300   65.1     4.1 s
- Slots busy                                 1 / 4   03:08:40  Done        74       2     120   70.1     1.0 s
- ████████████━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- System RAM             15.6 / 30 GB · server 2.0
- █████████████████████████▏━━━━━━━━━━━━━━━━━━━━━━
-
- 1-4 views   Tab model   Space freeze   r refresh   t theme   c clear   ? help   q quit
-```
+![Dashboard](./assets/dashboard.png)
 
 ## Features
 
