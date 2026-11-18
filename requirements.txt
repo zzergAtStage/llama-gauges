@@ -1,0 +1,4 @@
+rich>=13
+psutil>=5.9
+# optional: GPU sensors via NVML (PCIe throughput, clocks, fan). Falls back to nvidia-smi without it.
+nvidia-ml-py>=12
